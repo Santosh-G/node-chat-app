@@ -4,9 +4,31 @@
 <meta charset="utf-8">
 	<title>Welcome to the chat app </title>
 </head>
-<body>
-<p>Welcome to chat APP</p>
+<link rel="stylesheet" type="text/css" href="/css/style.min.css">
+<body class="chat">
+	<div class="chat__sidebar">
+		<h3>People</h3>
+		<div id="users">
+
+		</div>
+	</div>
+	<div class="chat__main">
+		<p>Welcome to chat APP</p>
+			<ol id="message-list" class="chat__messages"></ol>
+
+			<div class="chat__footer">
+				<form id="message-form">
+					<input name="message" type="text" placeholder="Enter Message" id='message-text'/>
+					<button>Send</button>
+					<button type="button" name="button" id="send_location">Send Location</button>
+				</form>
+			</div>
+
+	</div>
+
+
 <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/js/libs/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/js/index.js"></script>
 </body>
 </html>
